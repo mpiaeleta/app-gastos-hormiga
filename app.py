@@ -164,7 +164,78 @@ hr {
     padding-top: 2.5rem;
     padding-bottom: 3rem;
 }
+/* VERDE MAS OSCURO PARA TITULOS */
+h1, h2, h3 {
+    color: #365D48 !important;
+}
 
+/* BOTONES: VERDE CLARO CON LETRAS OSCURAS */
+.stButton > button,
+.stDownloadButton > button,
+.stFormSubmitButton > button {
+    background-color: #DCEBDD !important;
+    color: #315541 !important;
+    border: 1px solid #B9D2BE !important;
+    border-radius: 30px;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    min-height: 50px;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover,
+.stFormSubmitButton > button:hover {
+    background-color: #C7DFC9 !important;
+    color: #294B38 !important;
+}
+
+/* NUMEROS DE LAS METRICAS */
+div[data-testid="stMetricValue"] {
+    color: #365D48 !important;
+    font-size: 38px !important;
+    font-weight: 800 !important;
+}
+
+/* TITULOS DE LAS METRICAS */
+div[data-testid="stMetricLabel"] {
+    color: #865B67 !important;
+    font-size: 19px !important;
+    font-weight: 650 !important;
+}
+
+/* TABLAS Y GASTOS */
+div[data-testid="stDataFrame"] {
+    font-size: 17px !important;
+}
+
+/* TEXTOS DE LOS CUADROS */
+.stTextInput label,
+.stNumberInput label,
+.stDateInput label,
+.stSelectbox label,
+.stMultiSelect label,
+.stRadio label {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+/* TEXTO GENERAL MAS GRANDE */
+.stMarkdown p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+}
+
+/* PESTAÑAS MAS LEGIBLES */
+.stTabs [data-baseweb="tab"] {
+    font-size: 18px !important;
+    font-weight: 650 !important;
+}
+
+/* BARRA LATERAL */
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] label {
+    font-size: 17px !important;
+}
 </style>
 """, unsafe_allow_html=True)
 HOY = pd.Timestamp.today().normalize()
