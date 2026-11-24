@@ -13,6 +13,53 @@ import core
 import graficos
 
 st.set_page_config(page_title="Gastos hormiga", page_icon="🐜", layout="wide")
+st.markdown("""
+<style>
+.stApp {
+    background-color: #F8F7F4;
+    color: #393B38;
+}
+
+section[data-testid="stSidebar"] {
+    background-color: #EDF2EC;
+}
+
+h1, h2, h3 {
+    color: #477B61 !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: #F2DFE3;
+    border-radius: 10px;
+    color: #65575A;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #DFEBE1 !important;
+    color: #477B61 !important;
+}
+
+.stButton > button,
+.stDownloadButton > button {
+    background-color: #477B61;
+    color: white !important;
+    border-radius: 10px;
+    border: none;
+}
+
+div[data-testid="stMetric"] {
+    background-color: #FFFFFF;
+    border: 1px solid #E9E5E0;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #477B61;
+}
+
+</style>
+""", unsafe_allow_html=True)
 HOY = pd.Timestamp.today().normalize()
 NOMBRES = {"plazo fijo": "Plazo fijo", "fci": "FCI de dinero", "dolar": "Dólar", "bitcoin": "Bitcoin"}
 
