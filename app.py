@@ -15,47 +15,154 @@ import graficos
 st.set_page_config(page_title="Gastos hormiga", page_icon="🐜", layout="wide")
 st.markdown("""
 <style>
+
+/* FONDO GENERAL */
 .stApp {
-    background-color: #F8F7F4;
-    color: #393B38;
+    background-color: #FFF4F5;
+    color: #494044;
+    font-size: 18px;
 }
 
+/* BARRA LATERAL */
 section[data-testid="stSidebar"] {
-    background-color: #EDF2EC;
+    background-color: #F8E5E9;
+    border-right: 1px solid #F0D5DB;
 }
 
-h1, h2, h3 {
-    color: #477B61 !important;
+/* TITULOS */
+h1 {
+    color: #668875 !important;
+    font-size: 2.7rem !important;
+    font-weight: 750 !important;
+}
+
+h2 {
+    color: #668875 !important;
+    font-size: 2rem !important;
+}
+
+h3 {
+    color: #BD7E8D !important;
+    font-size: 1.5rem !important;
+}
+
+/* TEXTO GENERAL */
+p, label, .stMarkdown {
+    font-size: 17px;
+    color: #494044;
+}
+
+/* PESTAÑAS */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 12px;
+    background: transparent;
 }
 
 .stTabs [data-baseweb="tab"] {
-    background-color: #F2DFE3;
-    border-radius: 10px;
-    color: #65575A;
+    background-color: #F5DDE2;
+    border-radius: 30px;
+    padding: 12px 23px;
+    color: #805D66;
+    font-size: 16px;
 }
 
 .stTabs [aria-selected="true"] {
-    background-color: #DFEBE1 !important;
-    color: #477B61 !important;
-}
-
-.stButton > button,
-.stDownloadButton > button {
-    background-color: #477B61;
+    background-color: #D991A0 !important;
     color: white !important;
-    border-radius: 10px;
-    border: none;
 }
 
+/* BOTONES */
+.stButton > button,
+.stDownloadButton > button,
+.stFormSubmitButton > button {
+    background-color: #668875;
+    color: white !important;
+    border-radius: 30px;
+    border: none;
+    padding: 12px 24px;
+    font-size: 17px;
+    font-weight: 650;
+    min-height: 45px;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    background-color: #4F705D;
+    color: white !important;
+}
+
+/* METRICAS Y NUMEROS */
 div[data-testid="stMetric"] {
     background-color: #FFFFFF;
-    border: 1px solid #E9E5E0;
-    border-radius: 14px;
-    padding: 18px;
+    border: 1px solid #F0D5DB;
+    border-radius: 24px;
+    padding: 23px;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #A66F7D;
+    font-size: 17px;
 }
 
 div[data-testid="stMetricValue"] {
-    color: #477B61;
+    color: #668875;
+    font-size: 32px;
+    font-weight: 750;
+}
+
+/* CAMPOS DE ENTRADA */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input {
+    background-color: #FFFFFF;
+    border: 1px solid #EBCBD2;
+    border-radius: 15px;
+    color: #494044;
+    font-size: 17px;
+    min-height: 45px;
+}
+
+/* SELECTORES */
+div[data-baseweb="select"] > div {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    border-color: #EBCBD2;
+}
+
+/* TABLAS */
+div[data-testid="stDataFrame"],
+div[data-testid="stTable"] {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* EXPANSORES */
+div[data-testid="stExpander"] {
+    background-color: #FBEAEC;
+    border: 1px solid #F0D5DB;
+    border-radius: 18px;
+}
+
+/* MENSAJES */
+div[data-testid="stAlert"] {
+    border-radius: 18px;
+}
+
+/* SEPARADORES */
+hr {
+    border-color: #F0D5DB;
+}
+
+/* SUBTITULOS */
+.stCaption {
+    color: #8C777D;
+    font-size: 14px;
+}
+
+/* ESPACIADO */
+.block-container {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
 }
 
 </style>
